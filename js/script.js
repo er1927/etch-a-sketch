@@ -1,15 +1,15 @@
-// console.log("is this thing on??");
+// Declaring a variable for the container created in the HTML:
+const grid = document.getElementById("container");
 
-const gridContainer = document.querySelector(".grid-container");
-
-// // not sure this one down below works, 
-// I can see the purple outline but not the indiviaul cells in orange
-
-function createGrid (numCells) {
-    for (let d = 0; d < numCells; d++) {
-        let cells = document.createElement("div");
-        gridContainer.appendChild(cells); //I get an err for cells on the console
+createGrid = () => {
+    for (let i = 0; i < 256; i++) {
+        const div = document.createElement('div');
+        div.classList.add('grid-element');
+        div.addEventListener('mouseover', function(event){
+            event.target.style.backgroundColor = 'teal';
+        })
+        grid.appendChild(div); 
     }
-};
+    };
+    createGrid();
 
-createGrid(256);
