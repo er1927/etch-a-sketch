@@ -31,15 +31,37 @@ h1 {
 .buttons {
   display: flex;
   flex-direction: column;
-  align-self: center;
+  align-items: center;
+  justify-content: center;
   font-size: 3em;
   color:  darkgray;
   text-shadow: 2px 2px #141414;
 }
 
+input {
+  /* background-image: url("../palette-solid.svg");
+  background-color: transparent; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  height:70px;
+  width:70px;
+  border: none;
+  /* border-radius: 50px; */
+  cursor: pointer;
+}
+#color::-webkit-color-swatch {
+  border-radius: 50%;
+}
+
 .fa-solid {
   padding:20px;
   margin:1px;
+}
+
+.fa-eraser.active {
+  background-color: #d9d9d9;
 }
 
 .container {
@@ -67,4 +89,14 @@ footer {
 }
 a {
   text-decoration: none;
+}
+
+/* MOBILE STYLES */
+
+@media only screen and (max-width: 600px) {
+  
+  
+  .buttons {
+    flex-direction: row;
+  }
 }
