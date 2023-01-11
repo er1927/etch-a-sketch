@@ -1,9 +1,7 @@
-// Declaring a variable for the container created in the HTML:
 const grid = document.getElementById("container");
 const colorPicker = document.querySelector("#color");
 const eraseCell = document.querySelector(".fa-eraser");
 const clearAll = document.querySelector(".fa-broom");
-
 let colorPicked =
 
 createGrid = () => {
@@ -18,24 +16,19 @@ createGrid = () => {
     };
     createGrid();
 
-    colorPicker.addEventListener("input", showsColors);
-    eraseCell.addEventListener("click", erasesByCell);
-    clearAll.addEventListener("click", clearsGrid);
+colorPicker.addEventListener("input", showsColors);
+eraseCell.addEventListener("click", erasesByCell);
+clearAll.addEventListener("click", clearsGrid);
 
 function showsColors(e) {
-    // /console.log("You've clicked on the color picker") // works
-            colorPicked = e.target.value; //IT WORKS!   
-    }
-
+    colorPicked = e.target.value; 
+}
 
 function erasesByCell() {
-    console.log("You've clicked on the eraser") // works   
-    
+    // console.log("You've clicked on the eraser") // works
 }
 
 function clearsGrid() {
-    // console.log("You've clicked on the clear grid lil broom") // works
     grid.innerHTML= "";
-    createGrid(); //it works!!!
-    
+    createGrid();
 }
