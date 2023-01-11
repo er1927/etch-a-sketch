@@ -1,6 +1,5 @@
 const grid = document.getElementById("container");
 const colorPicker = document.querySelector("#color");
-const eraseCell = document.querySelector(".fa-eraser");
 const clearAll = document.querySelector(".fa-broom");
 let colorPicked =
 
@@ -17,15 +16,10 @@ createGrid = () => {
     createGrid();
 
 colorPicker.addEventListener("input", showsColors);
-eraseCell.addEventListener("click", erasesByCell);
 clearAll.addEventListener("click", clearsGrid);
 
 function showsColors(e) {
     colorPicked = e.target.value; 
-}
-
-function erasesByCell() {
-    // console.log("You've clicked on the eraser") // works
 }
 
 function clearsGrid() {
